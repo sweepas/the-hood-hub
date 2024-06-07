@@ -1,3 +1,4 @@
+import NavItems from "@/components/shared/NavItems";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 

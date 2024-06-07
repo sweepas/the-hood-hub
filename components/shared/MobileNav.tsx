@@ -10,12 +10,10 @@ import {
 
 const MobileNav = () => {
   return (
-    <nav className="">
+    <nav className="md:hidden">
       <Sheet>
-        <SheetTrigger className="bg-blue-500 p-2 text-black rounded">
-          Openevwfvffwrvervfr4tvtv
-        </SheetTrigger>
-        <SheetContent side="right">
+        <SheetTrigger className="bg-blue-500 p-2 text-white rounded">Open</SheetTrigger>
+        <SheetContent>
           <SheetHeader>
             <SheetTitle>Are you absolutely sure?</SheetTitle>
             <SheetDescription>
