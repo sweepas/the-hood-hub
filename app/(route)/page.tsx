@@ -1,12 +1,33 @@
 import NavItems from "@/components/shared/NavItems";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>The HoodHub</h1>
-      <Button>Hello</Button>
-    </main>
+    <>
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+          <div className="flex flex-col justify-center gap-8">
+            <h1 className="h1-bold">Explore Community Events Near You!</h1>
+            <p className="p-regular-20 md:p-regular-24">Have fun, help others, and embrace your HUD. Discover events and activities happening in your neighborhood.</p>
+            <Button size="lg" asChild className="button w-full sm:w-fit bg-green-600 text-black">
+              <Link href="#events">
+                Explore Now
+              </Link>
+            </Button>
+          </div>
+
+          <Image 
+            src="/assets/images/festival.jpeg"
+            alt="hero"
+            width={1000}
+            height={1000}
+            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh] rounded-lg"
+          />
+        </div>
+      </section> 
+    </>
+
   );
 }

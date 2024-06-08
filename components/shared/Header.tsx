@@ -1,13 +1,13 @@
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
-import Link from "next/link"
-import { Button } from "../ui/button"
-import NavItems from "./NavItems"
-import MobileNav from "./MobileNav"
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import NavItems from "./NavItems";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
     <header className="w-full border-b">
-      <div className="wrapper flex items-center justify-between">
+      <div className="wrapper flex items-center justify-between bg-green-600">
         <Link href="/" className="w-36 font-black">
           TheHoodHub
         </Link>
@@ -25,15 +25,13 @@ const Header = () => {
           </SignedIn>
           <SignedOut>
             <Button asChild className="rounded-full" size="lg">
-              <Link href="/login">
-                Login
-              </Link>
+              <Link href="/login">Login</Link>
             </Button>
           </SignedOut>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
